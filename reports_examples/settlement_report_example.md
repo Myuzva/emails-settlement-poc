@@ -38,7 +38,7 @@ The counterparty reports a settlement issue for a securities transaction and ask
 | Field | Email Value | HOST Value | Status | Severity |
 |-------|-------------|------------|--------|----------|
 | reference_number | VO00624838 | VO00624838 | match | none |
-| security_isin | null | CH0012530207 | missing_in_email | low |
+| security_isin | null | CH0012530207 | missing_in_email | none |
 | security_name | ABB Ltd. | ABB Ltd. | match | none |
 | settlement_date | 2026-03-12 | 2026-03-12 | match | none |
 | trade_date | 2026-03-11 | 2026-03-11 | match | none |
@@ -56,7 +56,7 @@ The counterparty reports a settlement issue for a securities transaction and ask
 
 ## 6. Recommended Action
 - [x] No reconciliation discrepancy found. Host trade VO00624838 matches the email facts (open, sell, 90,161 @ CHF 1,946,833.17, settlement 2026-03-12).
-- [x] Respond to requester confirming trade is on track for settlement / no host discrepancies.
+- [ ] Respond to requester confirming trade is on track for settlement / no host discrepancies.
 - [ ] Optionally, perform a host lookup for related trade XE02053260 if the requester requires its status.
 
 ---
