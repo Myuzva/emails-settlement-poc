@@ -2,30 +2,30 @@
 
 ## 1. Decision
 
-**Settlement Inquiry:** No  
+**Settlement Inquiry:** Unknown  
 
-**Priority:** Low  
+**Priority:** High  
 
-**Recommended Action:** No action required. Route to irrelevant/no_action folder.
+**Recommended Action:** Manual review required due to unsupported schema or invalid payload.
 
-**Reason:** The email is an internal administrative communication regarding a budget variance report and employee survey. It does not contain any settlement-related information and has an unsupported schema.
+**Reason:** The system encountered an unsupported schema version or invalid payload during processing, resulting in a confidence score of 0. Human intervention is required to process this email.
 
 ---
 
 ## 2. Email Summary
 
-**Email ID:** email_003  
-**Subject:** Employee Survey – Your Input Needed  
+**Email ID:** email_003.eml  
+**Subject:** Unknown  
 **Sender:** Unknown  
 **Received:** Unknown  
-**Counterparty:** None
+**Counterparty:** Unknown
 
-Email is an internal administrative communication regarding a budget variance report and employee survey.
+The email could not be processed automatically due to a schema validation error ("unsupported_schema").
 
 ---
 
 ## 3. Classification
-- **Primary Type:** irrelevant (unsupported_schema)
+- **Primary Type:** unknown
 - **Multi-type:** false
 
 ---
@@ -38,34 +38,37 @@ Email is an internal administrative communication regarding a budget variance re
 
 ## 5. HOST Lookup Comparison
 
-| Field | Email Value | HOST Value | Status | Severity |
-|-------|-------------|------------|--------|----------|
-| reference_number | null | null | missing_in_email | none |
-| security_isin | null | null | missing_in_email | none |
-| security_name | null | null | missing_in_email | none |
-| settlement_date | null | null | missing_in_email | none |
-| trade_date | null | null | missing_in_email | none |
-| quantity | null | null | missing_in_email | none |
-| amount | null | null | missing_in_email | none |
-| currency | null | null | missing_in_email | none |
-| side | null | null | missing_in_email | none |
-| counterparty_name | null | null | missing_in_email | none |
-| status | null | null | missing_in_email | none |
+HOST lookup was not performed (Status: not_called).
 
-### Discrepancy Flags
+|Field|Email Value|HOST Value|Status|Severity|
+~-------~-------------~-----------~------~---------~
+|reference_number|null|null|N/A|none|
+|security_isin|null|null|N/A|none|
+<security_name|null|null|N/A|none|
+|settlement_date|null|null|N/A|none|
+<trade_date|null|null|N/A|none|
+|quantity|null|null|N/A|none|
+|amount|null|null|N/A|none|
+<surrency|null|null|N/A|none|
+<side|null|null|N/A|none|
+|counterparty_name|null|null|N/A|none|
+|status|null|null|N/A|none|
+
+:## Discrepancy Flags
 - None
 
 ---
 
-## 5. Findings
+## 6. Findings
 
-The email does not contain any trade or settlement data. It is an internal administrative email. No HOST lookup was performed.
+The automated processing failed due to an unsupported schema version provided in the input. The system flagged this case with validation errors and warnings: `unsupported_schema`.
 
 ---
 
-## 6. Next Steps
+## 7. Next Steps
 
-1. No further action required.
-2. Move email to the irrelevant/no_action folder.
+1. IT/Support to investigate the payload schema version mismatch.
+2. Analyst to manually review the original email (`email_003.eml`) to extract any relevant trade or settlement information.
+3. Process the case manually if it contains valid settlement instructions or inquiries.
 
 ---
