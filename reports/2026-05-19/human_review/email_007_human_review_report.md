@@ -74,5 +74,3 @@ The likely cause of the settlement break is a date format confusion (US vs EU fo
 3. Ask the counterparty to confirm the expected settlement date.
 
 4. Keep the case under analyst review until the discrepancy is resolved.
-
----
